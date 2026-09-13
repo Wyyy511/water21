@@ -1,8 +1,2 @@
-.env
-.env.*
-!.env.example
-__pycache__/
-.pytest_cache/
-*.pyc
-logs/*.jsonl
-outputs/*
+# Created by pytest automatically.
+*

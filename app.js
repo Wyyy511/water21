@@ -29,7 +29,7 @@ function setFile(f){
   state.file=f||null;
   if(els.attach){
     els.attach.classList.toggle('has-file',!!f);
-    els.attach.title=f?('已选择：'+f.name+'（再次点击可更换数据文件）'):'上传采购 / ESG 数据（Excel/CSV）';
+    els.attach.title=f?('已选择：'+f.name+'（再次点击可更换数据文件）'):'上传采购/ESG结构化数据（Excel/CSV）';
   }
   if(f){toast('已添加文件：'+f.name)}
   else if(els.file){els.file.value=''}

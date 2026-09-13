@@ -111,7 +111,7 @@ body.chatting
       <section id="welcome" class="welcome">
         <div class="hero-kicker"><span>✦</span> 科技型农食企业 · 上游供应链水风险智能决策</div>
         <h1>看见上游风险，<br/><span>做出更稳决策</span></h1>
-        <p class="welcome-intro">你好，我是 WaterPulse。你可以直接告诉我想分析的原材料、供应地区或风险问题，也可以上传采购 / ESG 数据（Excel/CSV），或下载 Excel 模板填写后上传。<br/>没有现成数据也可以先直接提问；如果想快速体验完整流程，可以点击“体验示例”，系统会自动载入一组虚拟甘蔗采购情景并交给 AI 分析。</p>
+        <p class="welcome-intro">你好，我是 WaterPulse。你可以直接告诉我想分析的原材料、供应地区或风险问题，也可以上传采购/ESG结构化数据（Excel/CSV），或下载 Excel 模板填写后上传。<br/>没有现成数据也可以先直接提问；如果想快速体验完整流程，可以点击“体验示例”，系统会自动载入一组虚拟甘蔗采购情景并交给 AI 分析。</p>
       </section>
       <section id="messages" class="messages" aria-live="polite"></section>
     </main>
@@ -124,7 +124,7 @@ body.chatting
         </div>
         <div class="composer-bottom">
           <div class="left-tools">
-            <button id="attachBtn" class="tool-link" type="button" title="上传采购 / ESG 数据（Excel/CSV）" aria-label="上传数据">
+            <button id="attachBtn" class="tool-link" type="button" title="上传采购/ESG结构化数据（Excel/CSV）" aria-label="上传数据">
               <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>上传数据</span>
             </button>
             <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" hidden/>
@@ -188,7 +188,7 @@ function setFile(f){
   state.file=f||null;
   if(els.attach){
     els.attach.classList.toggle('has-file',!!f);
-    els.attach.title=f?('已选择：'+f.name+'（再次点击可更换数据文件）'):'上传采购 / ESG 数据（Excel/CSV）';
+    els.attach.title=f?('已选择：'+f.name+'（再次点击可更换数据文件）'):'上传采购/ESG结构化数据（Excel/CSV）';
   }
   if(f){toast('已添加文件：'+f.name)}
   else if(els.file){els.file.value=''}

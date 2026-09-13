@@ -1,36 +1,8 @@
-# WaterPulse AI Agent V10.2 — 教师反馈最终 Demo 入口版
+# pytest cache directory #
 
-本版按最新教师反馈收口用户入口。
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
 
-## 用户可见的五个入口
-- 直接文字输入
-- 上传采购 / ESG 数据（Excel/CSV）
-- 下载 Excel 模板填写后上传
-- 浏览器语音转文字输入
-- “体验示例”按钮：自动把甘蔗虚拟采购组合写入对话框并直接发送给 AI
+**Do not** commit this to version control.
 
-## 最终 Demo 规则
-- 不再把 ESG 报告、PDF 或 Word 作为入口，也不提示用户“上传 ESG 报告”。
-- 体验示例明确标注：虚拟案例、不对应真实企业、采购比例为研究团队假设。
-- 核心风险数字由确定性程序计算；DeepSeek 负责需求理解、结果解释和管理建议。
-- 一键体验默认使用甘蔗案例，便于完整演示一条稳定链路。大豆和甜菜可作为补充 Demo，通过同一 Excel 模板上传，不混在一个案例里。
-
-## 三材料补充 Demo 文件
-包内附带甘蔗、甜菜、大豆三个独立 Excel Demo 文件。推荐录屏时“一键体验”只演示甘蔗完整链路；甜菜和大豆作为补充案例分别上传，不把三种材料混成一个企业采购案例。
-
-
-## V10.2 模板调整
-网站下载的 Excel 模板现在严格只保留两个工作表：
-1. `采购数据`：空白企业输入表，仅有 enterprise / material / node_id / node_name / purchase_weight / year 六列；
-2. `填写说明`：仅解释每个字段应该填写什么，不包含 baseline 映射表、案例数据或预置 Demo。
-
-这样把“用户输入模板”和“项目内部主数据/演示案例”彻底分开。甘蔗一键体验仍由网页“体验示例”按钮触发，不写进企业下载模板。
-
-
-## 本次更新：四类压力测试可选择
-
-上传采购数据并完成当前风险分析后，可直接选择主要供应地中断、极端干旱、关键用水期压力升高、未来水环境变化（演示）。每次测试后保留四个按钮，继续切换时沿用本次采购结构和基准结果。输入区新增“压力测试”按钮；直接输入“让我选择压力测试”也能打开菜单。
-
-标准采购模板只上传附件、不填写问题时，也会进入当前风险分析。月度、历史极端干旱或未来情景数据缺失时，显示具体缺口，不以空值汇总为零风险。情景数据来源和假设可在结果卡片展开查看。未来情景默认2050年BAU路径，仍明确标为演示，不代表真实预测。
-
-验证：30项相关Python测试通过；两份页面JavaScript语法与实际按钮事件、HTTP请求、四类计算切换通过。此次未完成浏览器视觉渲染验证。详见“四类压力测试_使用说明.md”。
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
